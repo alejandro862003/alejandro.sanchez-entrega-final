@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Maven+Pro:wght@500&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <title>Pagina de incio</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Aventura</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/galeria.html">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="Inicio">
+        <div class="container text-center text-white">
+            <h1 class="display-1">Bienvenido a la aventura</h1>
+        </div>
+        <div class="container col-sm-12">
+            <video onloadedmetadata="this.muted=true" autoplay loop>
+                <source src="./videos/montañas.mp4">
+            </video>
+        
+        </div>
+        
+        <div class="container-fluid text-center">
+            <h2 class="text-white">12 paisajes del mundo que dejan sin hablar</h2>
+            <p class="text-white">Cascadas impresionantes,desiertos de dunas infinitas,mares y lagos de película..el mundo está lleno de rincones que dejansin aliento por su belleza e inmensidad </p>
+            <p class="text-white">Estos son algunos de ellos:</p>
+        </div>
+
+        <div class="container p-4 " style="width: 60%; height: 60%;">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6" aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7" aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="8" aria-label="Slide 8"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="9" aria-label="Slide 9"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="10" aria-label="Slide 10"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="11" aria-label="Slide 11"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="12" aria-label="Slide 12"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="13" aria-label="Slide 13"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="./img/Argentina.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Argentina</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./img/Aus.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                           <h5>Australia</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/Australia.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                           <h5>Australia</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/Chile.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                           <h5>Chile</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/China.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                           <h5>China</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/Estados-Unidos.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                           <h5>Estados-Unidos</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/Grecia.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                           <h5>Grecia</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/Irlanda.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                           <h5>Irlanda</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/Italia.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                           <h5>Italia</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/Peru.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                           <h5>Peru</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/Tanzania.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                           <h5>Tanzania</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/Turquia.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                           <h5>Turquia</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/Venezuela.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                           <h5>Venezuela</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/Zhangjiajie.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                           <h5>China</h5>
+                        </div>
+                    </div>
+                </div>
+                    
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="section-two container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="display-3  text-white">Experiencias</h2>
+                <h3 class=" display-3 text-white text-capitalize">La experiencia al aire libre</h3>
+                <p class="text-white text-muted">Tenes la experiencias para acampar y descansar con la paz tranquilidad que necesitas al aire libre</p>
+            </div>
+            <article class="col-sm-4 card-effect">
+                <div class="card">
+                    <img src="./img/China.jpg" alt="" class="card-img card-img-filter ">
+                    <div class="card-img-overlay text-white d-flex flex-column justify-content-center text-center">
+                        <h4>RAfting</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi minima possimus commodi laboriosam iste repellat!</p>
+                    </div>
+                </div>
+            </article>
+            <article class="col-sm-4 card-effect">
+                <div class="card">
+                    <img src="./img/China.jpg" alt="" class="card-img card-img-filter">
+                    <div class="card-img-overlay text-white d-flex flex-column justify-content-center text-center">
+                        <h4>RAfting</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi minima possimus commodi laboriosam iste repellat!</p>
+                    </div>
+                </div>
+            </article>
+            <article class="col-sm-4  card-effect">
+                <div class="card">
+                    <img src="./img/China.jpg" alt="" class="card-img card-img-filter">
+                    <div class="card-img-overlay text-white d-flex flex-column justify-content-center text-center">
+                        <h4>RAfting</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi minima possimus commodi laboriosam iste repellat!</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    
+
+    
+    <footer class="footer bg-dark text-white text-center mt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>Información de contacto</h5>
+              <p>Teléfono: 123456789</p>
+              <p>Email: info@example.com</p>
+            </div>
+            <div class="col-md-6">
+              <h5>Síguenos en redes sociales</h5>
+              <ul class="list-inline">
+                <li class="list-inline-item"><a href="https://es-la.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                <li class="list-inline-item"><a href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <p class="mb-0">&copy; 2023 Mi Empresa. Todos los derechos reservados.</p>
+            </div>
+          </div>
+        </div>
+    </footer>
+      
+
+    
+    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+</body>
+</html>

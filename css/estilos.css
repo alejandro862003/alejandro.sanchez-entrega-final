@@ -1,8 +1,7 @@
 body{
     margin: 0;
     min-height: 100vh;
-    background-image: url(../img/Peru.jpg),
-                linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3));
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)),url(../img/Peru.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;

@@ -1,66 +1,75 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const formulario = document.querySelector('#miFormulario');
-  const modalExito = document.querySelector('#modalExito');
+// Obtener referencia al formulario
+const formulario = document.querySelector('#miFormulario');
+const modalExito = document.querySelector('#modalExito');
 
-  formulario.addEventListener('submit', function(event) {
-    event.preventDefault();
+// Evento submit del formulario
+formulario.addEventListener('submit', function(event) {
+  event.preventDefault();
 
-    if (formulario.checkValidity() === false) {
-      event.stopPropagation();
-      formulario.classList.add('was-validated');
-    } else {
-      guardarDatos();
-      enviarResultados();
-    }
-  });
-
-  function guardarDatos() {
-    const datos = {
-      nombre: document.querySelector('#nombre').value,
-      email: document.querySelector('#email').value,
-      mensaje: document.querySelector('#mensaje').value
-    };
-
-    const datosJson = JSON.stringify(datos);
-    localStorage.setItem('formularioDatos', datosJson);
+  if (formulario.checkValidity() === false) {
+    event.stopPropagation();
+    formulario.classList.add('was-validated');
+  } else {
+    guardarDatos();
+    enviarResultados();
   }
+});
 
-  function enviarResultados() {
+// Funcion para guardar los datos del formulario en el almacenamiento local
+function guardarDatos() {
+  const datos = {
+    nombre: document.querySelector('#nombre').value,
+    email: document.querySelector('#email').value,
+    mensaje: document.querySelector('#mensaje').value
+  };
+
+  const datosJson = JSON.stringify(datos);
+  localStorage.setItem('formularioDatos', datosJson);
+}
+
+// Funcion para simular el envio de resultados al servidor
+function enviarResultados() {
+  // Simulación de envío de resultados al servidor
+  setTimeout(function() {
+    // Limpiar el formulario
+    formulario.reset();
+    formulario.classList.remove('was-validated');
+
+    // Mostrar ventana modal de éxito
+    modalExito.style.display = 'block';
+    modalExito.classList.add('show');
+
+    // Cerrar la ventana modal después de 3 segundos
     setTimeout(function() {
-      formulario.reset();
-      formulario.classList.remove('was-validated');
+      closeModal();
+    }, 3000);
 
-      modalExito.style.display = 'block';
-      modalExito.classList.add('show');
+    // Eliminar los datos guardados en el almacenamiento local
+    localStorage.removeItem('formularioDatos');
+  }, 1000);
+}
 
-      setTimeout(function() {
-        closeModal();
-      }, 3000);
+// Cargar los datos del formulario guardados en el almacenamiento local
+function cargarDatosGuardados() {
+  const datosJson = localStorage.getItem('formularioDatos');
 
-      localStorage.removeItem('formularioDatos');
-    }, 1000);
+  if (datosJson) {
+    const datos = JSON.parse(datosJson);
+    document.querySelector('#nombre').value = datos.nombre;
+    document.querySelector('#email').value = datos.email;
+    document.querySelector('#mensaje').value = datos.mensaje;
   }
+}
 
-  function closeModal() {
-    modalExito.style.display = 'none';
-    modalExito.classList.remove('show');
-  }
+// Cerrar la ventana modal de éxito
+function closeModal() {
+  modalExito.style.display = 'none';
+  modalExito.classList.remove('show');
+}
 
-  function cargarDatosGuardados() {
-    const datosJson = localStorage.getItem('formularioDatos');
+cargarDatosGuardados();
 
-    if (datosJson) {
-      const datos = JSON.parse(datosJson);
-      document.querySelector('#nombre').value = datos.nombre;
-      document.querySelector('#email').value = datos.email;
-      document.querySelector('#mensaje').value = datos.mensaje;
-    }
-  }
-
-  cargarDatosGuardados();
-
-  const modalCerrar = modalExito.querySelector('.close');
-  modalCerrar.addEventListener('click', function() {
-    closeModal();
-  });
+const modalCerrar = modalExito.querySelector('.close');
+modalCerrar.addEventListener('click', function() {
+  closeModal();
 });
